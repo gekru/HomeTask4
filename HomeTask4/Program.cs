@@ -13,7 +13,7 @@ namespace HomeTask4
             //Test1();
             //Test2();
             //Test3();
-            //Test4();
+            Test4();
             //Test5();
             //Test6();
 
@@ -169,14 +169,12 @@ namespace HomeTask4
         {
             /*32.Дано вещественное число x.Вычислить.(x-1)*(x-3)..(x-63)/(x-2)(x-4)..(x-64)*/
 
-            //  !!!!!   QUESTION:   Doesn't work for big numbers. how to fix it?
-
-
+            
             Console.WriteLine("Enter integer number: ");
             int x = Convert.ToInt32(Console.ReadLine());
-            decimal numerator = 1, denominator=1;
+            double numerator = 1, denominator=1;
 
-            for (int i = 1; i <= 39; i += 2)
+            for (int i = 1; i <= 64; i += 2)
             {
                 numerator *= (x - i);
                 denominator *= (x - (i+1));
